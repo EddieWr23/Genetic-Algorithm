@@ -59,8 +59,8 @@ class Population:
     def reproduce(self):
         new_rectangles = []
         for i in range(POPULATION_SIZE):
-            parent1 = self.rectangles[random.randint(0, int(POPULATION_SIZE/2))]
-            parent2 = self.rectangles[random.randint(0, int(POPULATION_SIZE/2))]
+            parent1 = self.rectangles[random.randint(0, int(POPULATION_SIZE//1.5))]
+            parent2 = self.rectangles[random.randint(0, int(POPULATION_SIZE//1.5))]
             child_rect = pygame.Rect(parent1.rect.x, parent2.rect.y, RECT_SIZE[0], RECT_SIZE[1])
             child = Rectangle(child_rect)
             child.mutate()
@@ -69,6 +69,10 @@ class Population:
             
 # Main loop
 population = Population()
+screen.fill(BG_COLOR)
+pygame.draw.rect(screen, RECT_COLOR, TARGET_RECT, 3)
+population.draw()
+pygame.display.update()
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
