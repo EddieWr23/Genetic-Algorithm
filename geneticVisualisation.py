@@ -2,11 +2,11 @@ import pygame
 import random
 
 # Constants
-POPULATION_SIZE = 100
+POPULATION_SIZE = 500
 MUTATION_RATE = 0.1
-TARGET_RECT = pygame.Rect(300, 200, 200, 200)
+TARGET_RECT = pygame.Rect(375, 275, 50, 50)
 SCREEN_SIZE = (800, 600)
-RECT_SIZE = (15, 15)
+RECT_SIZE = (3, 3)
 BG_COLOR = (0,0,0)
 RECT_COLOR = (255, 255, 255)
 
